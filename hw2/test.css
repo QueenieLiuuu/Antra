@@ -1,0 +1,304 @@
+/* Global Style */
+* {
+    letter-spacing: 0!important;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0.75em 0 0.25em;
+}
+
+body {
+    background-color: #000;
+}
+
+video{
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+img{
+    border: 0;
+    height: auto;
+    max-width: 100%;
+    overflow: clip;
+    vertical-align: middle;
+}
+
+/* Ad-card */
+.ad-card {
+    background-color: transparent;
+    border-bottom: 8px solid #222;
+    color: #fff;
+    margin-bottom: 0;
+    padding: 50px 5%;
+    position: relative;
+}
+
+@media only screen and (min-width: 1450px), only screen and (min-width: 550px) and (max-width: 949px), only screen and (min-width: 950px) and (max-width: 1449px){
+    .ad-card {
+        padding: 70px 45px;
+        }
+    }
+
+
+/* Ad-card-container */
+.ad-card-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+@media only screen and (max-width: 349px), only screen and (min-width: 350px) and (max-width: 399px), only screen and (min-width: 400px) and (max-width: 549px), only screen and (min-width: 550px) and (max-width: 949px){
+    .ad-card-container{
+        flex-direction: column;
+    }
+}
+
+/* Ad-card-container in Flipped Section */
+.ad-card.flipped .ad-card-container{
+    flex-flow: row-reverse;
+}
+
+/* @media only screen and (max-width: 349px), only screen and (min-width: 350px) and (max-width: 399px), only screen and (min-width: 400px) and (max-width: 549px), only screen and (min-width: 550px) and (max-width: 949px){
+    .ad-card.flipped .ad-card-container {
+        flex-flow: column;
+    }
+} */
+
+/* Ad-card-text */
+.ad-card-text{
+    margin: 5% 0;
+    font-size: 1.625rem;
+    font-weight: 400;
+}
+
+.animation-card .ad-card-text{
+    flex: 0 1 auto;
+    height: 100%;
+    padding: 0 3rem 0 0;
+    width: 52%;
+    z-index: 3;
+}
+
+.animation-card.watchOnTv .ad-card-text{
+    margin: -5% 0;
+}
+
+.animation-card.flipped .ad-card-container .ad-card-text {
+    padding: 0 0 0 3rem;
+}
+
+@media only screen and (max-width: 349px), only screen and (min-width: 350px) and (max-width: 399px), only screen and (min-width: 400px) and (max-width: 549px), only screen and (min-width: 550px) and (max-width: 949px){
+    .animation-card .ad-card-text {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+    }
+
+/* Ad-card-title */
+@media only screen and (max-width: 349px), only screen and (min-width: 350px) and (max-width: 399px), only screen and (min-width: 400px) and (max-width: 549px){
+    .ad-card-title {
+        font-size: 1.625rem;
+    }
+}
+
+
+/* Ad-card-subtitle */
+.ad-card-subtitle{
+    font-weight: 400;
+    font-size: 1.625rem;
+}
+
+
+@media only screen and (min-width: 550px) and (max-width: 949px){
+.ad-card-subtitle {
+    font-size: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 349px), only screen and (min-width: 350px) and (max-width: 399px), only screen and (min-width: 400px) and (max-width: 549px){
+    .ad-card-subtitle, .ad-card-text {
+        font-size: 1.125rem;
+    }
+}
+
+/* Image Container */
+.animation-card .ad-card-img-container {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 1 auto;
+    height: 100%;
+    width: 48%;
+}
+
+@media only screen and (max-width: 349px), only screen and (min-width: 350px) and (max-width: 399px), only screen and (min-width: 400px) and (max-width: 549px), only screen and (min-width: 550px) and (max-width: 949px){
+    .animation-card .ad-card-img-container {
+        margin-top: 1em;
+        max-width: 600px;
+        width: 100%;
+    }
+}
+
+
+
+/* maintain the image into the flexbox */
+.animation-card .ad-card-animation-container {
+    margin: -10% -5% -5% 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.animation-card.downloadAndWatch.flipped .ad-card-animation-container {
+    margin: -8% 0 -4% -15%;
+}
+
+
+@media only screen and (max-width: 349px), only screen and (min-width: 350px) and (max-width: 399px), only screen and (min-width: 400px) and (max-width: 549px), only screen and (min-width: 550px) and (max-width: 949px){
+    .animation-card.downloadAndWatch.flipped .ad-card-animation-container {
+        margin: -8% 0 0;
+    }
+}
+
+
+@media only screen and (max-width: 349px), only screen and (min-width: 350px) and (max-width: 399px), only screen and (min-width: 400px) and (max-width: 549px), only screen and (min-width: 550px) and (max-width: 949px){
+    .animation-card.flipped .ad-card-container {
+        flex-flow: column;
+    }
+}
+
+.animation-card.downloadAndWatch .ad-card-animation-container {
+    margin: -8% 0 0;
+    min-height: 100px;
+    width: 100%;
+}
+
+/* Custom Animation */
+@media only screen and (min-width: 1450px), only screen and (min-width: 950px) and (max-width: 1449px){
+    .animation-card.animation-card.downloadAndWatch .ad-card-animation {
+        padding: 0.5em 0.75em;
+    }
+}
+
+.ad-card-animation-container{
+    margin: -8% 0 -4% -15%;
+    min-height: 100px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.ad-card-animation .ad-card-animation-custom {
+    background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif) 50% no-repeat;
+    background-size: 100%;
+    content: "";
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 3em;
+    outline: 2px solid #000;
+    outline-offset: -2px;
+    width: 3em;
+}
+
+.ad-card .ad-card-animation {
+    align-items: center;
+    background: #000;
+    border: 2px solid hsla(0,0%,100%,.25);
+    border-radius: 0.75em;
+    bottom: 8%;
+    box-shadow: 0 0 2em 0 #000;
+    display: flex;
+    left: 50%;
+    margin: 0 auto;
+    min-width: 15em;
+    padding: 0.25em 0.65em;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 60%;
+}
+
+.ad-card-animation .ad-card-animation-image {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0 1em 0 0;
+}
+
+.animation-card.downloadAndWatch .ad-card-animation .ad-card-animation-text {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 0.3em 0;
+}
+
+.text-0 {
+    color: #fff;
+    font-size: .9em;
+    font-weight: 500;
+}
+
+.text-1 {
+    color: #0071eb;
+    font-size: .75em;
+    font-weight: 400;
+}
+
+
+.animation-card.downloadAndWatch .ad-card-animation .ad-card-animation-image img {
+    height: 3em;
+}
+
+
+@media only screen and (min-width: 950px) and (max-width: 1449px){
+    .animation-card.downloadAndWatch .ad-card-animation .ad-card-animation-image img {
+        height: 4.5em;
+    }
+}
+
+@media only screen and (min-width: 1450px){
+    .animation-card.downloadAndWatch .ad-card-animation .ad-card-animation-image img {
+        height: 5em;
+    }
+}
+
+@media only screen and (min-width: 1450px), only screen and (min-width: 550px) and (max-width: 949px), only screen and (min-width: 950px) and (max-width: 1449px){
+    .text-0 {
+        font-size: 1em;
+    }
+}
+
+/* Video */
+.animation-card.watchOnTv .ad-card-video-animation {
+    height: 100%;
+    left: 50%;
+    max-height: 54%;
+    max-width: 73%;
+    position: absolute;
+    top: 48%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.animation-card.animation-card.watchEverywhere .ad-card-video-animation{
+    height: 100%;
+    left: 50%;
+    max-height: 47%;
+    max-width: 63%;
+    position: absolute;
+    top: 34%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.animation-card.watchEverywhere .ad-card-video, .animation-card.watchOnTv .ad-card-video {
+    height: 100%;
+    width: 100%;
+}
+
+/* Adjust the video under the image by adjust the z-index and position */
+.animation-card.watchEverywhere .ad-card-img, .animation-card.watchOnTv .ad-card-img {
+    position: relative;
+    z-index: 2;
+}
